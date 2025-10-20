@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\PositionController;
+use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route resource untuk employees
+// Route utama untuk masing-masing menu
 Route::resource('employees', EmployeeController::class);
+Route::resource('departments', DepartmentController::class);
+Route::resource('positions', PositionController::class);
+Route::resource('attendance', AttendanceController::class);
+Route::resource('report', ReportController::class);
+Route::resource('settings', SettingController::class);
